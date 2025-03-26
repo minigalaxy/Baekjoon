@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1737115681 source:c:\users\iihoo\documents\baekjoon\1620\main.cpp
+	<iostream>
+	<unordered_map>
+	<string>
+	<vector>
+

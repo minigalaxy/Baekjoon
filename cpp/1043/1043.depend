@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1738724061 source:g:\다른 컴퓨터\내 컴퓨터 (1)\ps\baekjoon\cpp\1043\main.cpp
+	<iostream>
+	<set>
+
+1738765241 source:c:\users\iihoo\documents\ps\baekjoon\cpp\1043\main.cpp
+	<iostream>
+	<queue>
+	<vector>
+

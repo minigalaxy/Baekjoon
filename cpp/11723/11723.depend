@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1737112496 source:c:\users\iihoo\documents\baekjoon\11723\main.cpp
+	<iostream>
+	<set>
+	<string>
+

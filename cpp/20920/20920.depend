@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1739885466 source:c:\users\iihoo\documents\ps\baekjoon\cpp\20920\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<map>
+

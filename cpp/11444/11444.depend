@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1739684644 source:c:\users\iihoo\documents\ps\atcoder\heuristiccontest.043\11444\main.cpp
+	<iostream>
+
+1739777360 source:c:\users\iihoo\documents\ps\baekjoon\cpp\11444\main.cpp
+	<iostream>
+	<map>
+

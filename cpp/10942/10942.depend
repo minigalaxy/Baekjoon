@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1741009270 source:g:\다른 컴퓨터\내 컴퓨터\ps\baekjoon\cpp\10942\main.cpp
+	<iostream>
+
+1741054287 source:g:\다른 컴퓨터\내 컴퓨터\ps\baekjoon\cpp\10942\test.cpp
+	<iostream>
+	<random>
+

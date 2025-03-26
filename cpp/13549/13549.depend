@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1738159619 source:c:\users\iihoo\documents\baekjoon\13549\main.cpp
+	<iostream>
+	<deque>
+
