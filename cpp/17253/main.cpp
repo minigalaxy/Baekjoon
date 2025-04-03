@@ -2,7 +2,7 @@
 
 using namespace std;
 
-long long N;
+int N;
 
 int main()
 {
@@ -25,6 +25,6 @@ int main()
     }
 
     cout<< "YES";
-
+    
     return 0;
 }

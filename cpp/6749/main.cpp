@@ -2,8 +2,13 @@
 
 using namespace std;
 
+int Y, M;
+
 int main()
 {
-    cout << "Hello world!" << endl;
+    cin >> Y >> M;
+    
+    cout << M * 2 - Y;
+    
     return 0;
 }
