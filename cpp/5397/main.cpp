@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <vector>
+#include <stack>
 
 using namespace std;
 
@@ -8,7 +8,7 @@ int T;
 
 string s;
 
-string res;
+stack<char> l, r;
 
 int main()
 {
@@ -19,29 +19,43 @@ int main()
     cin >> T;
     
     for(int i = 0; i < T; i++){
-        res.clear();
-            
         cin >> s;
-        
-        int cur = 0;
         
         for(char c: s){
             if(c == '<'){
-                cur = max(0, cur - 1);
-            } else if(c == '>'){
-                cur = min(int(res.size()), cur + 1);
-            } else if(c == '-'){
-                if(cur > 0){
-                    res.erase(res.begin() + cur - 1);
-                    cur = max(0, cur - 1);
+                if(!l.empty()){
+                    r.push(l.top());
+                    l.pop();
                 }
+            } else if(c == '>'){
+                if(!r.empty()){
+                    l.push(r.top());
+                    r.pop();
+                }
+            } else if(c == '-'){
+                if(!l.empty()) l.pop();
             } else {
-                res.insert(res.begin() + cur, c);
-                cur++;
+                l.push(c);
             }
         }
         
-        cout << res << '\n';
+        stack<char> t;
+        
+        while(!l.empty()){
+            t.push(l.top());
+            l.pop();
+        }
+        
+        while(!t.empty()){
+            cout << t.top();
+            t.pop();
+        }
+        while(!r.empty()){
+            cout << r.top();
+            r.pop();
+        }
+        
+        cout << '\n';
     }
     
     return 0;

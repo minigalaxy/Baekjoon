@@ -24,7 +24,7 @@ int main()
     
     for(int i = 1; i <= 10; i++){
         cnt[i]--;
-        for(int j = 1; j <= 10; j++){
+        for(int j = i; j <= 10; j++){
             cnt[j]--;
             if(cnt[i] >= 0 && cnt[j] >= 0){
                 if(i == j) r2 = i + 9;
