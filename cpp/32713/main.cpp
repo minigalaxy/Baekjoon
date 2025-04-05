@@ -6,28 +6,27 @@ int N, K;
 
 int A[5000];
 
-int visited[5000][5000] = { 0, };
-
 int res = 0;
 
 void solve(int i, int L, int p, int k){
-    if(k > K) return;
-    if(i >= N) return;
-    
     res = max(res, L);
-    
-    if(L >= visited[i][k])
+
+    if(i + 1 < N){
+        if(A[i + 1] != p){
+            if(k < K) solve(i + 1, L, p, k + 1);
+        } else solve(i + 1, L + 1, p, k);
+    }
 }
 
 int main()
 {
     cin >> N >> K;
-    
+
     for(int i = 0; i < N; i++) cin >> A[i];
-        
-    for(int i = 0; i < N; i++) solve(N, 1, A[i], 0);
-    
+
+    for(int i = 0; i < N; i++) solve(i, 1, A[i], 0);
+
     cout << res;
-    
+
     return 0;
 }
