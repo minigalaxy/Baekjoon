@@ -7,18 +7,23 @@ int T;
 
 long long N;
 
-int res;
-
 int main()
 {
     cin >> T;
     
     for(int i = 0; i < T; i++){
         cin >> N;
+
+        long long s = 1, e = sqrt(N) * 2;
+                
+        while(s < e){
+            long long m = (s + e) / 2 + 1;
+            
+            if(m * (m + 1) / 2 > N) e = m - 1;
+            else s = m;
+        }
         
-        res = N * N / 2;
-        
-        cout << res << '\n';
+        cout << s << '\n';
     }
     
     return 0;
