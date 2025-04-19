@@ -1,4 +1,7 @@
 # depslib dependency file v1.0
-1742654104 source:c:\users\iihoo\documents\ps\baekjoon\cpp\14003\main.cpp
+1744679691 source:c:\users\ÀÌ¿µÈÆ\documents\ps\codeforces\round.1017\14003\main.cpp
 	<iostream>
+	<vector>
+	<algorithm>
+	<stack>
 

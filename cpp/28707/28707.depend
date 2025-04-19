@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1744599671 source:c:\users\ÀÌ¿µÈÆ\documents\ps\codeforces\round.1017\28707\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+
+1744608030 source:c:\users\ÀÌ¿µÈÆ\documents\ps\baekjoon\cpp\28707\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<unordered_map>
+	<queue>
+
