@@ -8,8 +8,7 @@ int N;
 
 pair<int, int> ST[200000];
 
-queue<pair<int, int>> schedule;
-queue<pair<int, int>> tmp;
+priority_queue<int, vector<int>, greater<int>> ongoing;
 
 int res = 0;
 
@@ -18,29 +17,32 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-    
+
     cin >> N;
-    
+
     for(int i = 0; i < N; i++) cin >> ST[i].first >> ST[i].second;
-        
+
     sort(ST, ST + N);
-    
-    for(int i = 0; i < N; i++) schedule.push(ST[i]);
-        
-    while(!schedule.empty()){
-        int c = 0;
-    
-        for(int i = schedule.size(); i > 0; i--){
-            if(schedule.front().first >= c) c = schedule.front().second;
-            else schedule.push(schedule.front());
-            
-            schedule.pop();
+
+    int tmp = 1;
+
+    ongoing.push(ST[0].second);
+
+    for(int i = 1; i < N; i++){
+        while(ongoing.top() <= ST[i].first){
+            ongoing.pop();
+
+            tmp--;
         }
-        
-        res++;
+
+        ongoing.push(ST[i].second);
+
+        tmp++;
+
+        res = max(res, tmp);
     }
-    
+
     cout << res;
-    
+
     return 0;
 }
