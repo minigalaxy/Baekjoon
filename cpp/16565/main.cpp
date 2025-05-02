@@ -4,28 +4,40 @@ using namespace std;
 
 int N;
 
-int card[13];
+int m[52][52];
 
-int solve(int n){
-    int sum = 0;
+int res = 0;
+
+const int R = 10007;
+
+int comb(int n, int r){
+    if(r == n || r == 0) return 1;
     
-    if(n >= 4){
-        for(int i = 0; i < 13; i++){
-            if(card[i] == 4){
-                card[i] -= 4;
-                sum += solve(n - 4);
-                card[i] += 4;
-            }
-        }
+    if(m[n][r] == -1){
+        m[n][r] = (comb(n - 1, r - 1) + comb(n - 1, r)) % 10007;
     }
     
+    return m[n][r];
 }
 
 int main()
 {
-    cin >> N;
+    fill(m[0], m[52], -1);
     
-    solve(N, 0);
+    cin >> N;   
+    
+    for(int i = 1; i <= N / 4; i++){
+        if(i % 2 == 1){
+            res += (comb(13, i) * comb(52 - i * 4, N - i * 4)) % R;
+            res %= R;
+        } else {
+            res -= (comb(13, i) * comb(52 - i * 4, N - i * 4)) % R;
+            res += R;
+            res %= R;
+        }
+    }
+    
+    cout << res;
     
     return 0;
 }
