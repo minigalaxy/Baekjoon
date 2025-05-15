@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1747150913 source:c:\users\ÀÌ¿µÈÆ\documents\ps\codeforces\round.1023\1060\main.cpp
+	<iostream>
+	<queue>
+	<set>
+	<algorithm>
+

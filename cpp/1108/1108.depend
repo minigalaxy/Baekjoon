@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1747201602 source:c:\users\ÀÌ¿µÈÆ\documents\ps\codeforces\round.1023\1108\main.cpp
+	<iostream>
+	<map>
+	<set>
+	<string>
+	<vector>
+	<queue>
+	<stack>
+
