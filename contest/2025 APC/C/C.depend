@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1747482557 source:c:\users\iihoo\documents\ps\baekjoon\contest\2025 apc\c\main.cpp
+	<iostream>
+	<vector>
+	<map>
+
