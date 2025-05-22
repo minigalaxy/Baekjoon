@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1747885072 source:c:\users\ÀÌ¿µÈÆ\documents\ps\baekjoon\contest\2025 hepc\13141\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

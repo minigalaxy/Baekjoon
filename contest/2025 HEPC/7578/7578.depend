@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1747790920 source:c:\users\ÀÌ¿µÈÆ\documents\ps\baekjoon\contest\2025 hepc\7578\main.cpp
+	<iostream>
+	<set>
+	<unordered_map>
+	<vector>
+	<algorithm>
+
