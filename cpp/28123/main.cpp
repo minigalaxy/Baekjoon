@@ -9,10 +9,9 @@ int main()
 {
     cin >> n >> k >> x;
     
-    n -= 2;
-    
-    if(n >= 0) cout << (n / 103 * 10) + (n % 103) / 10;
-    else cout << 0;
+    if(x == 1) cout << n - 3 * (k - 1);
+    else if(x == 2 || x == 3 || x == 4) cout << n - 1 - 3 * (k - 1);
+    else cout << n - 2 - 3 * (k - 1);
     
     return 0;
 }
