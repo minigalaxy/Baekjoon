@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1748505435 source:c:\users\ÀÌ¿µÈÆ\documents\ps\baekjoon\cpp\15678\main.cpp
+	<iostream>
+	<queue>
+	<algorithm>
+

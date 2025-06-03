@@ -2,11 +2,9 @@
 
 using namespace std;
 
-const int R = 10'007;
-
 string S;
 
-int m[1000][1000];
+int m[30][30];
 
 int main()
 {
@@ -23,8 +21,8 @@ int main()
         int i = 0, j = l - 1;
         
         while(j < S.size()){
-            if(S[i] == S[j]) m[i][j] = (m[i + 1][j] + m[i][j - 1] - m[i + 1][j - 1] + (m[i + 1][j - 1] + 1) + R) % R;
-            else m[i][j] = (m[i + 1][j] + m[i][j - 1] - m[i + 1][j - 1] + R) % R;
+            if(S[i] == S[j]) m[i][j] = m[i + 1][j] + m[i][j - 1] - m[i + 1][j - 1] + (m[i + 1][j - 1] + 1);
+            else m[i][j] = m[i + 1][j] + m[i][j - 1] - m[i + 1][j - 1];
             
             i++;
             j++;
