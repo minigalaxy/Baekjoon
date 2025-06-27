@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1749087606 source:c:\users\ÀÌ¿µÈÆ\documents\ps\baekjoon\cpp\16287\main.cpp
+	<iostream>
+	<set>
+	<vector>
+	<algorithm>
+
