@@ -16,7 +16,7 @@ bool articulation_point[10'001] = { false, };
 void dfs(int parent, int cur){
     low[cur] = num[cur] = ++counter;
     
-    int child = 0;
+    int child = 0; 
     
     for(int next: edge[cur]){
         if(next != parent){
