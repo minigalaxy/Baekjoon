@@ -19,7 +19,7 @@ void dfs(int parent, int cur){
     int child = 0;
     
     for(int next: edge[cur]){
-        if(next != parent){
+        if(next != parent){d
             if(num[next] == 0){
                 child++;
                     
