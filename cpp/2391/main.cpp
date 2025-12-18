@@ -1,7 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
 
 using namespace std;
 
@@ -11,7 +8,7 @@ string word;
 
 int w;
 
-vector<string> dict;
+string dict[10'000];
 
 string res;
 
@@ -24,31 +21,24 @@ int main()
 
         cin >> w;
 
-        int eval = -1;
+        for(int j = 0; j < w; j++) cin >> dict[j];
+        
+        int res[2] = { 0, word.size() };
 
         for(int j = 0; j < w; j++){
-            string t;
-            cin >> t;
-
-            dict.push_back(t);
-        }
-
-        sort(dict.begin(), dict.end());
-
-        for(int j = 0; j < w; j++){
-            int t = 0;
-
+            int d = 0;
+            
             for(int k = 0; k < word.size(); k++){
-                if(word[k] == dict[j][k]) t++;
+                if(word[k] != dict[j][k]) d++;
             }
-
-            if(t > eval){
-                eval = t;
-                res = dict[j];
+            
+            if(d < res[1]){
+                res[1] = d;
+                res[0] = j;
             }
         }
 
-        cout << res << '\n';
+        cout << dict[res[0]] << '\n';
     }
 
     return 0;
